@@ -23,10 +23,11 @@ def get_page(xtype:str, country:str, category:str, day:str):
         info = requests.get(url).text
         info = json.loads(info)
         return parse_response(info) 
-    except:
+    except Exception as e:
         with open('db/error.txt', 'a') as fd:
             fd.write(f'ERROR: {url}\n')
         print(f'ERROR: {url}')
+        print(e)
         return {}
     
 def parse_response(info):
@@ -35,17 +36,22 @@ def parse_response(info):
     for pos, row in enumerate(info):
         for i, column in enumerate(row[:-1]):
             app_info[columns[i]].append({
-                'name': column['name'],
-                'publisher': column['publisher_name'],
-                'downloads': column['rating_count'],
-                'price': column['price'],
+                'name': try_get_field(column, 'name'),
+                'publisher': try_get_field(column, 'publisher_name'),
+                'downloads': try_get_field(column, 'rating_count'),
+                'price': try_get_field(column, 'price'),
                 # 'original_country': column['canonical_country'],
-                'release_date': column['release_date'],
-                'content_rating': column['content_rating'],
+                'release_date': try_get_field(column, 'release_date'),
+                'content_rating': try_get_field(column, 'content_rating'),
                 'position': pos 
             }) 
     return app_info
 
+def try_get_field(column, field):
+    try:
+        return column[field]
+    except:
+        return 'UNKNOWN'
 
 def get_dates():
     'Gets the last 90 days'

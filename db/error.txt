@@ -1,3 +1,0 @@
-ERROR: https://sensortower.com/api/android/rankings/get_category_rankings?category=all&country=BR&date=2020-11-13T00%3A00%3A00.000Z&device=MOBILE&limit=100&offset=0
-ERROR: https://sensortower.com/api/android/rankings/get_category_rankings?category=BR&country=all&date=2020-11-13T00%3A00%3A00.000Z&device=MOBILE&limit=100&offset=0
-ERROR: https://sensortower.com/api/android/rankings/get_category_rankings?category=BR&country=all&date=2020-11-13T00%3A00%3A00.000Z&device=MOBILE&limit=100&offset=0
