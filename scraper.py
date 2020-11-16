@@ -85,4 +85,5 @@ def get_pages(countries, dates, categories, xtype):
 
 
 if __name__ == "__main__":
+    open('db/error.txt', 'w').close()       # truncates file
     get_all_pages()

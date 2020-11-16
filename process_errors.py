@@ -4,15 +4,18 @@ import re, os
 from scraper import get_page
 
 def process_file(error_filename: str):
-    err_file = open(error_filename)
+    with open(error_filename) as err_file:
+        lines = err_file.readlines()
                         #  ERROR: https://sensortower.com/api/android/rankings/get_category_rankings?category=all&country=BR&date=2020-11-13T00%3A00%3A00.000Z&device=MOBILE&limit=100&offset=0\n''
     pattern = re.compile(r'https://sensortower\.com/api/(?P<type>(android|ios))/rankings/get_category_rankings\?category=(?P<category>.+)&country=(?P<country>\w{2})&date=(?P<day>(\d{4}-\d{2}-\d{2}))T00%3A00%3A00\.000Z&device=(?P<phone>(MOBILE|IPHONE))&limit=100&offset=0')
-    lines = err_file.readlines()
-    open(error_filename, 'w').close()
+    open(error_filename, 'w').close()       # truncates file
     for err in lines:
         m = pattern.search(err)
-        process_page(**m.groupdict())    
-    return True if len(err_file.readlines()) == 0 else False
+        process_page(**m.groupdict())  
+    
+    with open(error_filename) as err_file:
+        lines = err_file.readlines() 
+    return True if len(lines) == 0 else False
 
 def process_page(type, category, country, day, phone):
     page_info = get_page(type, country, category, day)
