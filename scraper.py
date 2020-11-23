@@ -35,6 +35,7 @@ def parse_response(info):
     columns = ['Free', 'Paid']
     for pos, row in enumerate(info):
         for i, column in enumerate(row[:-1]):
+            if i >= 2: break
             app_info[columns[i]].append({
                 'name': try_get_field(column, 'name'),
                 'publisher': try_get_field(column, 'publisher_name'),

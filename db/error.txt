@@ -1,0 +1,9 @@
+ERROR: https://sensortower.com/api/ios/rankings/get_category_rankings?category=books&country=US&date=2020-08-26T00%3A00%3A00.000Z&device=IPHONE&limit=100&offset=0
+ERROR: https://sensortower.com/api/ios/rankings/get_category_rankings?category=books&country=US&date=2020-08-26T00%3A00%3A00.000Z&device=IPHONE&limit=100&offset=0
+ERROR: https://sensortower.com/api/ios/rankings/get_category_rankings?category=books&country=US&date=2020-08-26T00%3A00%3A00.000Z&device=IPHONE&limit=100&offset=0
+ERROR: https://sensortower.com/api/ios/rankings/get_category_rankings?category=books&country=US&date=2020-08-26T00%3A00%3A00.000Z&device=IPHONE&limit=100&offset=0
+ERROR: https://sensortower.com/api/ios/rankings/get_category_rankings?category=books&country=US&date=2020-08-26T00%3A00%3A00.000Z&device=IPHONE&limit=100&offset=0
+ERROR: https://sensortower.com/api/ios/rankings/get_category_rankings?category=books&country=US&date=2020-08-26T00%3A00%3A00.000Z&device=IPHONE&limit=100&offset=0
+ERROR: https://sensortower.com/api/ios/rankings/get_category_rankings?category=medical&country=US&date=2020-11-23T00%3A00%3A00.000Z&device=IPHONE&limit=100&offset=0
+ERROR: https://sensortower.com/api/ios/rankings/get_category_rankings?category=medical&country=US&date=2020-11-22T00%3A00%3A00.000Z&device=IPHONE&limit=100&offset=0
+ERROR: https://sensortower.com/api/ios/rankings/get_category_rankings?category=medical&country=US&date=2020-11-23T00%3A00%3A00.000Z&device=IPHONE&limit=100&offset=0
