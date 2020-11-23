@@ -68,8 +68,8 @@ def get_all_pages():
     dates = get_dates()
     countries = json.load(open('db/countries.json'))
     # obtiene la informacion de iphone
-    categories_ios = json.load(open('db/compress_ios_categories.json')) 
-    get_pages(countries, dates, categories_ios, 'ios')
+    # categories_ios = json.load(open('db/compress_ios_categories.json')) 
+    # get_pages(countries, dates, categories_ios, 'ios')
     # obtiene la informacion de android
     android_categories = json.load(open('db/compress_android_categories.json'))
     get_pages(countries, dates, android_categories, 'android')
