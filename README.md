@@ -4,7 +4,7 @@ This project provides a scraper for [SensorTower](https://app.sensortower.com/) 
 
 ## Features
 
-- Scrapes download statistics for Android and iOS apps from SensorTower
+- Scrapes download statistics for Android and iOS apps from SensorTower and creates a JSON
 - Gathers data for analysis and insights into app performance
 
 ## Installation
